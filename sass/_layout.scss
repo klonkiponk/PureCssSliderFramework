@@ -1,0 +1,62 @@
+html {
+    background: #000;
+}
+
+body {
+    background:#f2f2f2;    
+}
+
+.mainWrapper {
+    position:relative;
+//    width:960px;
+}
+
+.object1 {
+}
+.object2 {
+}
+.object3 {
+}
+.object4 {
+}
+.object5 {
+}
+
+article {
+//    padding:20px;
+//    margin-bottom: 70px;
+    height:$articleHeight;
+//    @include box-shadow(1px 1px 3px #666);
+    @include box-sizing(border-box);
+    
+    .insetShadow {
+        @include box-shadow(1px 1px 10px #ccc);
+    }
+}
+
+//The white Ones that make the sliding look nicer
+.upperShadowLeft {
+    width:100px;
+    height:$articleHeight;
+    position:absolute;
+    z-index:2;
+    left:0px;
+          
+    @include filter-gradient(#f2f2f2, #ffffff, horizontal);
+    @include background-image(linear-gradient(left,  rgba(242,242,242,1) 0%,rgba(255,255,255,0) 100%));
+
+}
+
+.upperShadowRight {
+    width:100px;
+    height:$articleHeight;
+    position:absolute;
+    z-index:2;
+    right:0px;
+    @include filter-gradient(#ffffff, #f2f2f2, horizontal);
+    @include background-image(linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(242,242,242,1) 100%));
+}
+
+
+
+

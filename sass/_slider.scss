@@ -1,0 +1,168 @@
+.PCcssSlider {
+	position:relative;
+	margin:0 auto;
+	width:960px;     
+	height:$articleHeight + 300px;  
+	z-index:1;    
+	input.hidden{
+		display:none;
+	}
+	label.cssSliderLabel{
+	    display:block;
+	    height:$articleHeight;
+	    width:40px;
+	    position:absolute;
+	    top:-9999px;
+	    cursor:pointer;
+	    opacity:0.8;
+	    z-index:3333;
+	    @include box-sizing(border-box);
+    }	
+	.center-0 {
+		left:420px;
+		position:absolute;
+		top:$articleHeight - 1px;
+		z-index:2;
+	} 
+	.slides-0 {
+		width:960px;
+		overflow:hidden;
+	}     
+	.inner-0 {
+	    width:4800px;
+	    -webkit-transition:margin 0.8s;
+	    transition:margin 0.8s;
+	    -moz-transition:margin 0.8s;
+	    -o-transition:margin 0.8s;
+	-webkit-transition-timing-function: cubic-bezier(0.700, 0, 0.300, 1); /* older webkit */
+	-webkit-transition-timing-function: cubic-bezier(0.700, -0.200, 0.300, 1.200); 
+	   -moz-transition-timing-function: cubic-bezier(0.700, -0.200, 0.300, 1.200); 
+	    -ms-transition-timing-function: cubic-bezier(0.700, -0.200, 0.300, 1.200); 
+	     -o-transition-timing-function: cubic-bezier(0.700, -0.200, 0.300, 1.200); 
+	        transition-timing-function: cubic-bezier(0.700, -0.200, 0.300, 1.200); /* custom */    
+	}
+	.inner-0 div.object{
+	    float:left;
+	    width:960px;
+	    height:$articleHeight + 300px;
+	    position:relative;
+	}
+	#control1-0:checked ~ .slides-0 .inner-0 { margin-left:0px; } 
+	#control2-0:checked ~ .slides-0 .inner-0 { margin-left:-960px; } 
+	#control3-0:checked ~ .slides-0 .inner-0 { margin-left:-1920px; } 
+	#control4-0:checked ~ .slides-0 .inner-0 { margin-left:-2880px; } 
+	#control5-0:checked ~ .slides-0 .inner-0 { margin-left:-3840px; } 
+	/*************************\
+	    RIGHT Arrows
+	\*************************/
+	#control1-0:checked ~ .slides-0 .right label:nth-child(2),
+	#control2-0:checked ~ .slides-0 .right label:nth-child(3),
+	#control3-0:checked ~ .slides-0 .right label:nth-child(4),
+	#control4-0:checked ~ .slides-0 .right label:nth-child(5),
+	#control5-0:checked ~ .slides-0 .right label:nth-child(1){
+	    right:0px;
+	    top:0px;
+	    cursor:e-resize;
+	    padding-top:330px;
+	}
+	#control1-0:checked ~ .slides-0 .right label:nth-child(2):before,
+	#control2-0:checked ~ .slides-0 .right label:nth-child(3):before,
+	#control3-0:checked ~ .slides-0 .right label:nth-child(4):before,
+	#control4-0:checked ~ .slides-0 .right label:nth-child(5):before,
+	#control5-0:checked ~ .slides-0 .right label:nth-child(1):before {    
+	    font-family: "Symbol";
+	    content: "\f054";
+	    font-size:5em;
+	    color:#eee;
+	    @include text-shadow(1px 1px 3px #999);
+	    @include transition(color 1s, text-shadow 1s);       
+	    
+	}
+	#control1-0:checked ~ .slides-0 .right label:nth-child(2):hover:before,
+	#control2-0:checked ~ .slides-0 .right label:nth-child(3):hover:before,
+	#control3-0:checked ~ .slides-0 .right label:nth-child(4):hover:before,
+	#control4-0:checked ~ .slides-0 .right label:nth-child(5):hover:before,
+	#control5-0:checked ~ .slides-0 .right label:nth-child(1):hover:before {
+	    color:#ccc;
+	    @include text-shadow(1px 1px 3px #333);       
+	}
+	/*************************\
+	    LEFT ARROWS
+	\*************************/
+	#control2-0:checked ~ .slides-0 .left label:nth-child(1),
+	#control3-0:checked ~ .slides-0 .left label:nth-child(2),
+	#control4-0:checked ~ .slides-0 .left label:nth-child(3),
+	#control5-0:checked ~ .slides-0 .left label:nth-child(4){
+	    left:0px;
+	    top:0px;
+	    cursor:w-resize;  
+	    padding-top:330px;
+	    text-align: right;
+	
+	}
+	#control2-0:checked ~ .slides-0 .left label:nth-child(1):before,
+	#control3-0:checked ~ .slides-0 .left label:nth-child(2):before,
+	#control4-0:checked ~ .slides-0 .left label:nth-child(3):before,
+	#control5-0:checked ~ .slides-0 .left label:nth-child(4):before {
+	    font-family: "Symbol";
+	    content: "\f053";
+	    font-size:5em; 
+	    color:#eee;
+	    @include text-shadow(1px 1px 3px #999);
+	    @include transition(color 1s, text-shadow 1s);    
+	}
+	
+	#control2-0:checked ~ .slides-0 .left label:nth-child(1):hover:before,
+	#control3-0:checked ~ .slides-0 .left label:nth-child(2):hover:before,
+	#control4-0:checked ~ .slides-0 .left label:nth-child(3):hover:before,
+	#control5-0:checked ~ .slides-0 .left label:nth-child(4):hover:before {
+	    color:#ccc;       
+	    @include text-shadow(1px 1px 3px #333);    
+	    
+	}
+	/*************************\
+	    Bottom Checkboxes
+	\*************************/
+	.center-0 label{
+	    @include box-sizing(border-box);
+	    position:relative;
+	    top:0px;
+	    float:left;
+	    height: 16px;
+	    box-shadow: inset 0px 2px 10px rgba(0,0,0,1.0), 0px 0px 20px rgba(255,255,255,0.7);
+	    border-radius: 32px;
+	    width:16px;
+	    margin:4px;
+	    background: #999;
+	    z-index:3333;
+	    opacity: 0.5;
+	    @include transition(all 0.5s);
+	}	
+	/*************************\
+	    Bottom Checkboxes ACTIVE
+	\*************************/
+	#control1-0:checked ~ .slides-0 .center label:nth-child(1),
+	#control2-0:checked ~ .slides-0 .center label:nth-child(2),
+	#control3-0:checked ~ .slides-0 .center label:nth-child(3),
+	#control4-0:checked ~ .slides-0 .center label:nth-child(4),
+	#control5-0:checked ~ .slides-0 .center label:nth-child(5){ background: #fff;
+	    @include box-sizing(border-box);
+	    border: 3px solid #333;
+	    width: 16px;
+	    height: 16px;
+	    opacity: 0.5;
+	    box-shadow: 0px 0px 10px rgba(255,255,255,1.0),inset 0px 0px 3px rgba(0,0,0,1.0);
+	    @include transition(all 1s);    
+	}		
+}
+
+
+
+
+
+
+
+
+
+
+
